@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:webviewx/webviewx.dart';
+//import 'package:webviewx/webviewx.dart';
 
 class WebUnityWidgetView extends StatefulWidget {
   const WebUnityWidgetView({
     Key? key,
-    required this.onWebViewCreated,
+    //required this.onWebViewCreated,
     required this.unityOptions,
   }) : super(key: key);
 
   final Map<String, dynamic> unityOptions;
-  final void Function() onWebViewCreated;
+  //final void Function() onWebViewCreated;
 
   @override
   State<WebUnityWidgetView> createState() => _WebUnityWidgetViewState();
@@ -19,7 +19,7 @@ class _WebUnityWidgetViewState extends State<WebUnityWidgetView> {
   @override
   void initState() {
     super.initState();
-    widget.onWebViewCreated();
+    //widget.onWebViewCreated();
   }
 
   @override
@@ -29,13 +29,14 @@ class _WebUnityWidgetViewState extends State<WebUnityWidgetView> {
 
   @override
   Widget build(BuildContext context) {
-    return WebViewX(
-      initialContent: '${Uri.base.origin}/UnityLibrary/index.html',
-      initialSourceType: SourceType.url,
-      javascriptMode: JavascriptMode.unrestricted,
-      onWebViewCreated: (_) {},
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-    );
+    return Container();
+    // return WebViewX(
+    //   initialContent: '${Uri.base.origin}/UnityLibrary/index.html',
+    //   initialSourceType: SourceType.url,
+    //   javascriptMode: JavascriptMode.unrestricted,
+    //   onWebViewCreated: (_) {},
+    //   height: MediaQuery.of(context).size.height,
+    //   width: MediaQuery.of(context).size.width,
+    // );
   }
 }

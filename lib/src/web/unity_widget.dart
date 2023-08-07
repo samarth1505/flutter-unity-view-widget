@@ -112,7 +112,7 @@ class _UnityWidgetState extends State<UnityWidget> {
     }
 
     return WebUnityWidgetView(
-      onWebViewCreated: _onPlatformViewCreated,
+      // onWebViewCreated: _onPlatformViewCreated,
       unityOptions: unityOptions,
     );
   }

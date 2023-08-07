@@ -31,8 +31,8 @@ class FlutterUnityWidgetPlugin : FlutterPlugin, ActivityAware {
                         FlutterUnityWidgetFactory(
                                 binding.binaryMessenger,
                                 object : LifecycleProvider {
-                                    override fun getLifecycle(): Lifecycle {
-                                        return lifecycle!!
+                                    override fun getLifecycle(): Lifecycle? {
+                                        return lifecycle
                                     }
                                 }))
     }
